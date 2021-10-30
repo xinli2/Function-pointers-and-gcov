@@ -1,0 +1,7 @@
+all: calculator
+
+calculator: calculator.c calculator_parser.c expr.h expr_student.h
+	gcc -std=c99 -D _GNU_SOURCE -g -Wall calculator.c calculator_parser.c -o calculator
+
+clean:
+	rm -f calculator
